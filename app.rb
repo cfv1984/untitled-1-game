@@ -3,7 +3,12 @@ require './config'
 
 
 get '/' do
-    session[:word] = 'duck'
+    if not session[:score]
+      session[:score] = 0
+    end
+
+    session[:word] = ['duck','dog', 'cat'].sample
+    @score = session[:score]
     erb :home
 end
 
@@ -12,6 +17,12 @@ get '/image' do
     redirect "/#{image}.jpg"
 end
 
-post '/word' do 
-    session[:word] == params[:word]? "OK" : "WTF MAN"
+post '/' do 
+    if params[:word] == session[:word]
+	session[:score] += 1
+    else 
+	session[:score] -=1
+    end
+
+    redirect "/"
 end

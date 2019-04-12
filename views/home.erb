@@ -150,12 +150,12 @@ body {
   <div class="head"><i class="fas fa-image"></i> &nbsp; Untitled-1</div>
   <div class="content">
     <div class="imgScore">
-      <img src="/image" height=300 width=400 alt="">
-      <div class="Score"><i class="fas fa-thumbs-up"></i>&nbsp; +100</div>
+      <img src="/image?u=<%=rand(987654321)%>" height=300 width=400 alt="">
+      <div class="Score"><i class="fas fa-thumbs-up"></i> <%=@score%></div>
     </div>
     <div class="playBox">
       <div class="timer"><i class="fas fa-stopwatch"></i> Timer: 30</div>
-      <form action="/word" method="POST">
+      <form action="/" method="POST">
         <div class="inputText"><i class="fas fa-pen"></i> Ingrese palabra:</div>
         <div>
             <input class="word" type="text" name="word">
