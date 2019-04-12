@@ -3,6 +3,7 @@ Feature: Untitled
 Scenario: Ingreso a la aplicacion
     Given Ingreso a la aplicacion
     Then Veo una imagen
+    And Veo un campo para ingresar la palabra
 
 Scenario: Ingreso palabra correcta
     Given Ingreso a la aplicacion
