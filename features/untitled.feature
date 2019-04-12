@@ -24,7 +24,9 @@ Scenario: Decremento mi puntaje
     When Ingreso la palabra "dog"
     Then Mi puntaje decrece
 
-Scenario: Reinicio el juego
+Scenario: Reiniciar el juego
     Given Ingreso a la aplicacion
-    When Hago click en reiniciar juego
-    Then El juego termina y vuelve a comenzar
+    And Visito "/setearPuntaje"
+    And Mi puntaje es "1"
+    When Presiono "Reiniciar"
+    Then Mi puntaje es "0"

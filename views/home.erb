@@ -16,6 +16,7 @@
   color: #0f0326;
   /*black*/
 }
+
 *,
 *:before,
 *:after {
@@ -24,11 +25,13 @@
   font-family: Raleway, sans-serif;
   font-size: 16px;
 }
+
 html,
 body {
   height: 100%;
   width: 100%;
 }
+
 .container {
   display: flex;
   flex-flow: column wrap;
@@ -38,33 +41,40 @@ body {
   height: 100%;
   width: 100%;
 }
+
 .head {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 10%;
-  background:#b5d99c;
-  font-size: 24px;
+  font-size: 26px;
 }
+
 .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 80%;
 }
+
 .Score {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 32px;
-  margin-top: 30px;
+  font-size: 26px;
+  margin-top: 50px;
   background: #f5f7dc;
   padding: 10px;
 }
+
+.playBox {
+  margin: 80px;
+}
+
 .timer {
-  font-size: 32px;
+  font-size: 26px;
   margin-bottom: 30px;
   text-align: center;
   width: 250px;
@@ -72,16 +82,20 @@ body {
   padding: 10px;
   border-radius: 3px;
 }
+
+.inputText {
+  margin-bottom: 20px;
+}
+
 .word {
   width: 250px;
-  height: 50px;
   border: none;
   border-bottom: 1px solid gray;
   font-size: 20px;
-  margin-right: 2em;
   margin-bottom: 30px;
   background: none;
 }
+
 .btnRow {
   display: flex;
   flex-flow: row wrap;
@@ -89,6 +103,7 @@ body {
   align-items: center;
   margin-right: 2.5em;
 }
+
 .btnEnter {
   height: 50px;
   background: #b5d99c;
@@ -97,9 +112,11 @@ body {
   color: #0f0326;
   cursor: pointer;
   width: 250px;
+  font-size: 20px;
 }
+
 .btnReset {
-  padding: 10px;
+  padding: 15px;
   background: #e65f5c;
   border: 1px solid #e65f5c;
   border-radius: 3px;
@@ -108,6 +125,7 @@ body {
   border-radius: 50%;
   font-size: 12px;
 }
+
 .restartRow {
   display: flex;
   flex-flow: row wrap;
@@ -115,6 +133,7 @@ body {
   margin-right: 2.5em;
   margin-top: 30px;
 }
+
 .footer {
   display: flex;
   justify-content: center;
@@ -123,6 +142,7 @@ body {
   height: 10%;
   background: #f5f7dc;
 }
+
 .fa-heart {
   color: #e65f5c;
 }
