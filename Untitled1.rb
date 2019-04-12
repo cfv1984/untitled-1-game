@@ -6,4 +6,9 @@ class Untitled1
             :duck => "duck.jpg"
         }
     end
+
+    def getImage(image)
+        images[image]
+    end
+
 end
