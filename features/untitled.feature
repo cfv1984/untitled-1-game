@@ -34,3 +34,11 @@ Scenario: Decremento mi puntaje
     And Veo la imagen "duck"
     When Ingreso la palabra "dog"
     Then Mi puntaje decrece
+
+Scenario: Reiniciar el juego
+    Given Ingreso a la aplicacion
+    And Visito "/setearPuntaje"
+    And Mi puntaje es "1"
+    When Presiono "Reiniciar"
+    Then Mi puntaje es "0"
+
