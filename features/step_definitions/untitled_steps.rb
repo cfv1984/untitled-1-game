@@ -1,25 +1,26 @@
 Given(/^Ingreso a la aplicacion$/) do
-    pending # Write code here that turns the phrase above into concrete actions
+    visit '/'
 end
 
 Then(/^Veo una imagen$/) do
-    pending # Write code here that turns the phrase above into concrete actions
+	expect(page).to have_css("img")
 end
 
 Then(/^Veo un campo para ingresar la palabra$/) do
-    pending # Write code here that turns the phrase above into concrete actions
+    expect(page).to have_css("input")
 end
 
 When(/^Veo la imagen "([^"]*)"$/) do |imageWord|
-    pending # Write code here that turns the phrase above into concrete actions
+    expect(page).to have_css("img[src='/image']")
 end
 
 When(/^Ingreso la palabra "([^"]*)"$/) do |word|
-    pending # Write code here that turns the phrase above into concrete actions
+    fill_in("word", with: word)
+    click_button("Enviar")
 end
 
 Then(/^Veo el mensaje "([^"]*)"$/) do |resultMessage|
-    pending # Write code here that turns the phrase above into concrete actions
+  expect(page.has_content?resultMessage).to eq true
 end
 
 When(/^Hago click en reiniciar juego$/) do

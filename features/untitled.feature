@@ -10,7 +10,7 @@ Scenario: Ingreso palabra correcta
     Given Ingreso a la aplicacion
     When Veo la imagen "duck"
     And Ingreso la palabra "duck"
-    Then Veo el mensaje "OK!"
+    Then Veo el mensaje "OK"
 
 Scenario: Ingreso palabra incorrecta
     Given Ingreso a la aplicacion
