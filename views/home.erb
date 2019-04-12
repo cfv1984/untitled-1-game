@@ -81,6 +81,7 @@ body {
   background: #f5f7dc;
   padding: 10px;
   border-radius: 3px;
+  display: none;
 }
 
 .inputText {
@@ -153,7 +154,7 @@ body {
   <div class="head"><i class="fas fa-image"></i> &nbsp; Untitled-1</div>
   <div class="content">
     <div class="imgScore">
-      <img src="/image" height=400 width=400 alt="">
+      <img src="/image?u=<%=rand(123456789)%>" height=400 width=400 alt="">
       <div class="Score"><i class="fas fa-thumbs-up"></i> <span><%=@score%></span></div>
     </div>
     <div class="playBox">

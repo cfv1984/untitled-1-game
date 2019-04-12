@@ -5,8 +5,8 @@ require './config'
 get '/' do
     if params[:force]
       session[:word] = params[:force]
-    else 
-      session[:word] = ['duck','dog', 'cat'].sample
+    elsif params[:force] == '' || !params[:force]
+    	session[:word] = ['duck','dog', 'cat'].sample
     end
 
     if not session[:score]
