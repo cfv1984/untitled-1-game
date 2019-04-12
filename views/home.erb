@@ -1,36 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Untitled-1</title>
-</head>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+<html>
+<style>
+.colors {
+  color: #e65f5c;
+  /*rojo*/
+  color: #b5d99c;
+  /*verde*/
+  color: #f5f7dc;
+  /*beige*/
+  color: #ffff82;
+  /*yellow*/
+  color: #0f0326;
+  /*black*/
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightgrey;
+  height: 100%;
+  width: 100%;
+}
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  background:#b5d99c;
+  font-size: 24px;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+}
+.Score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  margin-top: 30px;
+  background: #f5f7dc;
+  padding: 10px;
+}
+.timer {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 250px;
+  background: #f5f7dc;
+  padding: 10px;
+  border-radius: 3px;
+}
+.word {
+  width: 250px;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid gray;
+  font-size: 20px;
+  margin-right: 2em;
+  margin-bottom: 30px;
+  background: none;
+}
+.btnRow {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2.5em;
+}
+.btnEnter {
+  height: 50px;
+  background: #b5d99c;
+  border: 1px solid #b5d99c;
+  border-radius: 3px;
+  color: #0f0326;
+  cursor: pointer;
+  width: 250px;
+}
+.btnReset {
+  padding: 10px;
+  background: #e65f5c;
+  border: 1px solid #e65f5c;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 12px;
+}
+.restartRow {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-right: 2.5em;
+  margin-top: 30px;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  background: #f5f7dc;
+}
+.fa-heart {
+  color: #e65f5c;
+}
+</style>
 <body>
-    <section id="step-1">
-        <header></header>
-    </section>
-    <section id="step-2">
-        <header>
-            <h2>The Game</h2>
-        </header>
-        <section class="image">
-            <img src="/image" />
-        </section>
-        <section class="input">
-        <%= erb :input_classic %>
-        </section>
-        <aside></aside>
-    </section>
-    <section id="step-3">
-        <header></header>
-    </section>
-
-    <script>
-        ['#step-1','#step-3'].forEach(id =>{
-            const node = document.querySelector(id);
-            node.parentNode.removeChild(node);
-        } )
-    </script>
+<div class="container">
+  <div class="head"><i class="fas fa-image"></i> &nbsp; Untitled-1</div>
+  <div class="content">
+    <div class="imgScore">
+      <img src="/image" height=400 width=400 alt="">
+      <div class="Score"><i class="fas fa-thumbs-up"></i>&nbsp; +100</div>
+    </div>
+    <div class="playBox">
+      <div class="timer"><i class="fas fa-stopwatch"></i> Timer: 30</div>
+      <form action="/word" method="POST">
+        <div class="inputText"><i class="fas fa-pen"></i> Ingrese palabra:</div>
+        <div>
+            <input class="word" type="text" name="word">
+        </div>
+        <div class="btnRow">
+            <button class="btnEnter"><i class="fas fa-sign-in-alt"></i> Ingresar Palabra</button>
+        </div>
+    </form>
+      <div class="restartRow">
+        <button class="btnReset">
+          <i class="fas fa-redo"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="footer">Made with&nbsp;<i class="fas fa-heart"></i>&nbsp;by seals</div>
+</div>
 </body>
 </html>

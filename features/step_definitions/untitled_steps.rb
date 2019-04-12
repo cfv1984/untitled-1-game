@@ -16,7 +16,7 @@ end
 
 When(/^Ingreso la palabra "([^"]*)"$/) do |word|
     fill_in("word", with: word)
-    click_button("Enviar")
+    click_button("Ingresar Palabra")
 end
 
 Then(/^Veo el mensaje "([^"]*)"$/) do |resultMessage|
