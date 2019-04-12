@@ -3,7 +3,7 @@ Given(/^Ingreso a la aplicacion$/) do
 end
 
 Then(/^Veo una imagen$/) do
-	expect(page).to have_css("img")
+    expect(page).to have_css("img")
 end
 
 Then(/^Veo un campo para ingresar la palabra$/) do
@@ -21,6 +21,21 @@ end
 
 Then(/^Veo el mensaje "([^"]*)"$/) do |resultMessage|
   expect(page.has_content?resultMessage).to eq true
+end
+
+Then(/^Mi puntaje aumenta$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^Mi puntaje decrece$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+
+
+
+Then(/^Veo un boton para reiniciar el juego$/) do
+  pending # Write code here that turns the phrase above into concrete actions
 end
 
 When(/^Hago click en reiniciar juego$/) do

@@ -18,11 +18,6 @@ Scenario: Ingreso palabra incorrecta
     And Ingreso la palabra "dog"
     Then Veo el mensaje "WTF MAN"
 
-Scenario: Reinicio el juego
-    Given Ingreso a la aplicacion
-    When Hago click en reiniciar juego
-    Then El juego termina y vuelve a comenzar
-
 Scenario: Aumento mi puntaje
     Given Ingreso a la aplicacion
     And Veo la imagen "duck"
@@ -34,3 +29,8 @@ Scenario: Decremento mi puntaje
     And Veo la imagen "duck"
     When Ingreso la palabra "dog"
     Then Mi puntaje decrece
+
+Scenario: Reinicio el juego
+    Given Ingreso a la aplicacion
+    When Hago click en reiniciar juego
+    Then El juego termina y vuelve a comenzar
