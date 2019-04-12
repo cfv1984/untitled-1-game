@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Untitled-1</title>
+</head>
+<body>
+    <section id="step-1">
+        <header></header>
+    </section>
+    <section id="step-2">
+        <header>
+            <h2>The Game</h2>
+        </header>
+        <section class="image"></section>
+        <section class="input"></section>
+        <aside></aside>
+    </section>
+    <section id="step-3">
+        <header></header>
+    </section>
+
+    <script>
+        ['#step-1','#step-3'].forEach(id =>{
+            const node = document.querySelector(id);
+            node.parentNode.removeChild(node);
+        } )
+    </script>
+</body>
+</html>
