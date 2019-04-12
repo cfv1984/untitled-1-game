@@ -3,12 +3,18 @@ require './config'
 
 
 get '/' do
+    if params[:force]
+      session[:word] = params[:force]
+    else 
+      session[:word] = ['duck','dog', 'cat'].sample
+    end
+
     if not session[:score]
       session[:score] = 0
     end
 
-    session[:word] = ['duck','dog', 'cat'].sample
     @score = session[:score]
+    @word = session[:word]
     erb :home
 end
 

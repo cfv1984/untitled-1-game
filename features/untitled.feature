@@ -12,12 +12,6 @@ Scenario: Ingreso palabra correcta
     And Ingreso la palabra "duck"
     Then Veo el mensaje "OK"
 
-Scenario: Ingreso palabra incorrecta
-    Given Ingreso a la aplicacion
-    When Veo la imagen "duck"
-    And Ingreso la palabra "dog"
-    Then Veo el mensaje "WTF MAN"
-
 Scenario: Aumento mi puntaje
     Given Ingreso a la aplicacion
     And Veo la imagen "duck"

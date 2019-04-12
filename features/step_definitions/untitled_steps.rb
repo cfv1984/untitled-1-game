@@ -11,24 +11,23 @@ Then(/^Veo un campo para ingresar la palabra$/) do
 end
 
 When(/^Veo la imagen "([^"]*)"$/) do |imageWord|
-    expect(page).to have_css("img[src='/image']")
+    visit "/?force=#{imageWord}"
 end
 
 When(/^Ingreso la palabra "([^"]*)"$/) do |word|
+    @points = 0
     fill_in("word", with: word)
     click_button("Ingresar Palabra")
 end
 
-Then(/^Veo el mensaje "([^"]*)"$/) do |resultMessage|
-  expect(page.has_content?resultMessage).to eq true
-end
-
 Then(/^Mi puntaje aumenta$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+    @resultPoints =  page.first('.Score span').text.to_i
+    expect(@points).to eq @resultPoints - 1
 end
 
 Then(/^Mi puntaje decrece$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+    @resultPoints =  page.first('.Score span').text.to_i
+    expect(@points).to eq @resultPoints + 1
 end
 
 

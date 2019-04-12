@@ -1,6 +1,8 @@
+<html>
+<head>
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
-<html>
+
 <style>
 .colors {
   color: #e65f5c;
@@ -125,20 +127,21 @@ body {
   color: #e65f5c;
 }
 </style>
+</head>
 <body>
 <div class="container">
   <div class="head"><i class="fas fa-image"></i> &nbsp; Untitled-1</div>
   <div class="content">
     <div class="imgScore">
-      <img src="/image?u=<%=rand(987654321)%>" height=400 width=400 alt="">
-      <div class="Score"><i class="fas fa-thumbs-up"></i> <%=@score%></div>
+      <img src="/image" height=400 width=400 alt="">
+      <div class="Score"><i class="fas fa-thumbs-up"></i> <span><%=@score%></span></div>
     </div>
     <div class="playBox">
       <div class="timer"><i class="fas fa-stopwatch"></i> Timer: 30</div>
       <form action="/" method="POST">
         <div class="inputText"><i class="fas fa-pen"></i> Ingrese palabra:</div>
         <div>
-            <input class="word" type="text" name="word">
+            <input class="word" id="word" type="text" name="word">
         </div>
         <div class="btnRow">
             <button class="btnEnter"><i class="fas fa-sign-in-alt"></i> Ingresar Palabra</button>
@@ -151,7 +154,10 @@ body {
       </div>
     </div>
   </div>
-  <div class="footer">Made with&nbsp;<i class="fas fa-heart"></i>&nbsp;by seals</div>
+  <div class="footer">Made with&nbsp;<i class="fas fa-heart"></i>&nbsp;by seals 
+  <div style="display:none"><input id="test_result" type="hidden" value="<%=@word%>" /></div>
+</div>
+
 </div>
 </body>
 </html>
